@@ -1,0 +1,73 @@
+section {
+  box-shadow: 0 0 10px #0000001a;
+  padding: 20px;
+  background-color: #fbfbfb;
+  .container {
+    max-width: 1440px;
+    margin: auto;
+    .exo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        row-gap: 20px;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        h1 {
+          font-size: 65px;
+          font-weight: 700;
+          letter-spacing: 0.8px;
+          line-height: 1;
+          max-width: 600px;
+          filter: drop-shadow(0 0 5px #01796f);
+          color: #fff;
+        }
+        p {
+          color: #000;
+          font-size: 18px;
+          letter-spacing: 0.8px;
+          filter: drop-shadow(0 0 5px #01796f);
+          line-height: 1.5em;
+          max-width: 700px;
+
+          span {
+            text-decoration: underline;
+            font-weight: 700;
+          }
+        }
+      }
+      div:not(.title) {
+        width: auto !important;
+        position: relative;
+        &:hover::after {
+          content: "You want to hire Me?";
+          position: absolute;
+          color: black;
+          font-size: 30px;
+          top: 0;
+          left: 0;
+          z-index: 99;
+          background-color: #01796f;
+          border-radius: 30px;
+          color: white;
+          padding: 15px 30px;
+          transition: all 0.8s;
+        }
+        canvas {
+          width: auto !important;
+          @media screen and (max-width: 425px) {
+            width: 300px !important;
+          }
+          cursor: pointer;
+          &:hover {
+            filter: drop-shadow(0 0 5px #01796f);
+          }
+        }
+      }
+    }
+  }
+}
